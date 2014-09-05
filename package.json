@@ -1,0 +1,28 @@
+{
+  "name": "videojs-track",
+  "version": "0.1.0",
+  "description": "A plugin for Video.js",
+  "keywords": [
+    "javascript",
+    "videojs",
+    "plugin",
+    "jQuery",
+    "jquery"
+  ],
+  "author": "Ourai Lin <ourairyu@hotmail.com> (http://ourai.ws/)",
+  "repository": {
+    "type": "git",
+    "url": "https://ourai@bitbucket.org/ourai/videojs-track.git"
+  },
+  "bugs": "https://bitbucket.org/ourai/videojs-track/issues",
+  "engines": "node >= 0.8.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-contrib-coffee": "~0.10.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0"
+  }
+}
