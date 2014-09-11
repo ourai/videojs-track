@@ -9,8 +9,7 @@ evoClass = ( className, hasDot ) ->
 # 这会导致在 vjs.get 发送请求时即使是同域也会判断为跨域。
 vjs.parseUrl = ( url ) ->
   url = vjs.parseUrl url
-
-  url.host = url.hostname if /:80\b/.test url.host
+  url.host = url.hostname if url.host.replace(/:80\b/, "") is url.hostname
 
   return url
 

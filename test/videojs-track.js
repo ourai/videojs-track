@@ -10,7 +10,7 @@
 
   vjs.parseUrl = function(url) {
     url = vjs.parseUrl(url);
-    if (/:80\b/.test(url.host)) {
+    if (url.host.replace(/:80\b/, "") === url.hostname) {
       url.host = url.hostname;
     }
     return url;

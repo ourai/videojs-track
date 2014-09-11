@@ -83,5 +83,5 @@ module.exports = ( grunt ) ->
   grunt.loadNpmTasks task for task in npmTasks
 
   grunt.registerTask "script", ["concat:coffee", "coffee", "uglify"]
-  # grunt.registerTask "css", ["concat:sass", "compass"]
+  grunt.registerTask "css", ["concat:sass", "compass"]
   grunt.registerTask "default", ["script", "copy", "clean"]
