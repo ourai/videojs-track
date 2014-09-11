@@ -25,10 +25,11 @@ module.exports = ( grunt ) ->
       dest_image: "<%= meta.dest %>/images"
       tests: "test"
     concat:
-      coffee_progress:
+      coffee:
         src: [
             "<%= meta.script %>/intro.coffee"
-            "<%= meta.script %>/progress.coffee"
+            "<%= meta.script %>/patch.coffee"
+            "<%= meta.script %>/track.coffee"
             "<%= meta.script %>/outro.coffee"
           ]
         dest: "<%= meta.dest %>/<%= pkg.name %>.coffee"
@@ -81,6 +82,6 @@ module.exports = ( grunt ) ->
 
   grunt.loadNpmTasks task for task in npmTasks
 
-  grunt.registerTask "script", ["concat:coffee_progress", "coffee", "uglify"]
-  grunt.registerTask "css", ["concat:sass", "compass"]
-  grunt.registerTask "default", ["script", "css", "copy", "clean"]
+  grunt.registerTask "script", ["concat:coffee", "coffee", "uglify"]
+  # grunt.registerTask "css", ["concat:sass", "compass"]
+  grunt.registerTask "default", ["script", "copy", "clean"]
